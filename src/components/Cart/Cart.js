@@ -5,8 +5,10 @@ import Emptycart from './EmptyCart'
 import { ProductConsumer } from '../../context'
 import Cartlist from './CartList'
 import CartTotals from './CartTotals'
+import { useHistory } from 'react-router-dom'
 
 const Cart = () => {
+  const history = useHistory()
   return (
     <section>
       <ProductConsumer>
@@ -18,7 +20,7 @@ const Cart = () => {
                 <Title name='your' title='cart'></Title>
                 <CartColumns />
                 <Cartlist value={value} />
-                <CartTotals value={value} />
+                <CartTotals value={value} history={history} />
               </>
             )
           } else {

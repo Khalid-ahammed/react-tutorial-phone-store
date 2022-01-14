@@ -1,5 +1,4 @@
 import React from 'react'
-import { ProductConsumer } from '../../context'
 
 const Emptycart = () => {
   return (
